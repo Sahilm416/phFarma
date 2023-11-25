@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style/style-LandingPage.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+</head>
+<style>
+
+  *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: poppins, sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+body {
+    /* background: linear-gradient(114.3deg, rgb(19, 126, 57) 0.2%, rgb(8, 65, 91) 68.5%); */
+    background-image: url('https://img.freepik.com/free-photo/organic-farm-harvests-fresh-fruit-vegetables-generated-by-ai_188544-36467.jpg?t=st=1700494199~exp=1700497799~hmac=ba7078e2012363e35fefebb48a641b8ff7ccc13b8231a19f1ac12fc6a44493ff&w=1060');
+    /* background: #000; */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    overflow: hidden;
+}
+.container {
+    width: 80%;
+    /* max-width: 400px; */
+    margin: 10px auto;
+    /* background-color: #fff; */
+    
+    padding: 10px;
+    border-radius: 8px;
+    /* box-shadow: 0 0 40px rgba(0, 0, 0, 0.2); */
+    /* border: 1px solid #129800; */
+}
+nav{
+    padding: 5px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: #000; */
+    /* backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(3px); */
+    border-radius: 5em;
+    overflow: hidden;
+}
+.logo{
+    height: 90px;
+    width: 90px;
+    display: flex;
+    align-items: center;
+    font-size: 3em;
+    font-weight: 900;
+    /* background-image: url('https://img.freepik.com/free-photo/three-dimensional-tree-with-foliage_23-2150928617.jpg?t=st=1700494591~exp=1700498191~hmac=83bf83d4b1165a2c4a4a363d42fa8ff9b11576e910df117ae3e4c65ca750deef&w=826');
+    background-position: center;
+    background-size: 250px;
+    background-repeat: no-repeat;
+    border-radius: 50%; */
+    /* background-color: #129800; */
+}
+ul{
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+ul a{
+    text-decoration: none;
+    padding: 15px;
+    /* background-color: #129800; */
+    background-color: #000;
+    color: #129800;
+    border: 0;
+    border-radius: 2em;
+}
+
+/* slide */
+.swiper {
+    width: 100%;
+    height: 400px;
+    background: #000;
+  }
+
+  .swiper-slide {
+    font-size: 18px;
+    color: #fff;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 40px 60px;
+  }
+
+  .parallax-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 130%;
+    height: 100%;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .swiper-slide .title {
+    font-size: 2em;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+
+  .swiper-slide .subtitle {
+    padding: 10px 10px;
+    background-color: rgba(0,0,0,0.61);
+    font-size:1.2rem;
+  }
+
+  .swiper-slide .text {
+    font-size: 14px;
+    /* max-width: 400px; */
+    line-height: 1.3;
+    padding: 10px 5px;
+    background-color: rgba(0,0,0,0.61);
+  }
+
+  .title-1{
+    padding: 10px 20px;
+    background-color: rgba(0,0,0,0.61);
+  }
+</style>
+<body>
+    <div class="container">
+        <nav>
+            <div class="logo">PhFarm</div>
+            <div class="menus">
+                <ul>
+                    <li><a href="/pages/forms.html">Form</a></li>
+                    <li><a href="/pages/crops.html">Crops & PH</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="container">
+        <main>
+            <!-- Creating slider here -->
+            <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper">
+                <div class="parallax-bg" style="filter: opacity(0.98);  
+                      background-image: url('https://img.freepik.com/free-photo/green-seedling-growing-soil-dark-background-seedling-ground_90220-1458.jpg?t=st=1700494046~exp=1700497646~hmac=7f45ad24c47aea44270526358f6c91749de672e2cde543d67c6a38cc9bec14a0&w=900');
+                    " data-swiper-parallax="-23%"></div>
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="title title-1" data-swiper-parallax="-300">Soil pH and Lime Requirement</div>
+                    <div class="subtitle" data-swiper-parallax="-200">- E.O Mclean (1983) </div>
+                    <div class="text" data-swiper-parallax="-100">
+                      <p>
+                        Soil pH is a measure of the activity of ionized H (H+) in the soil solution. Although other criteria are sometimes used as indices of lime needs of acid soils, the lime requirement (LR) is generally a measure of the base (lime) required to neutralize that fraction of the total acidity that must be neutralized to attain a desired soil pH that is favorable for crop growth. Hence the activity of H ion in the soil solutions is the intensity factor (index), whereas exchange acidity and LR are the capacity factors of soil acidity. Before the development of laboratory soil tests for determining the LR of individual soils, the amount of lime for a given soil condition and crop, or cropping sequence, was based on field experiments. Laboratory methods to determine LRs have involved soil-lime incubations, soil-base titrations, and soil-buffer equilibrations.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="title title-1" data-swiper-parallax="-300">Calculated Activities of Aluminum Monomers in Nutrient Solution</div>
+                    <div class="subtitle" data-swiper-parallax="-200">A. K. Alva (1986) Relationships between Root Length of Soybean</div>
+                    <div class="text" data-swiper-parallax="-100">
+                      <p>
+                        Aluminum species composition in solution is largely dependent on solution pH. Effects of Al on root length of soybean [Glycine max (L.) Merr.] were studied in solution culture using an incomplete factorial design comprising varying pH levels of 4.0, 4.2, 4.4, 4.6, 4.8, and 5.0 and added Al concentrations of 10, 15, 20, 25, 30 and 40 µM. These treatments caused calculated sum of activities of monomeric Al species (Σ aAl mono) in solution to vary from 4.4 to 33.8 µM.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="title title-1" data-swiper-parallax="-300">Soil pH and Soil Acidity</div>
+                    <div class="subtitle" data-swiper-parallax="-200">G. W. Thomas (1996) </div>
+                    <div class="text content-1" data-swiper-parallax="-100">
+                      <p>
+                        Soil pH is probably the single most informative measurement that can be made to determine soil characteristics. Soil pH values in the neighborhood of two to three indicate the presence of free mineral acid, usually H2SO4. The ratio of water to soil in the suspension has the effect of increasing pH as the ratio increases. In soils with higher pH values, hydrolysis of basic cations tends to maintain a stable pH with dilution. 
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+              </div>
+        </main>
+    </div>
+    <div class="">
+
+    </div>
+
+    <!-- script here -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src=""></script>
+<script>
+var swiper = new Swiper(".mySwiper", {
+      speed: 600,
+      parallax: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+
+</body>
+</html>

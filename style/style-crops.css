@@ -1,0 +1,406 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: poppins, sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+body {
+    transition: all 0.3s ease-in-out;
+    /* background-color: #f4f4f4; */
+    /* background: rgb(0,162,22); */
+    /* background-image: url('https://e0.pxfuel.com/wallpapers/195/880/desktop-wallpaper-green-gradient-minimalistic-background-black-and-green-gradient.jpg'); */
+    /* background: rgb(0,44,6);
+    background: -moz-linear-gradient(270deg, rgba(0,44,6,1) 0%, rgba(5,126,21,0.9864685742461047) 50%, rgba(0,40,2,1) 100%);
+    background: -webkit-linear-gradient(270deg, rgba(0,44,6,1) 0%, rgba(5,126,21,0.9864685742461047) 50%, rgba(0,40,2,1) 100%);
+    background: linear-gradient(270deg, rgba(0,44,6,1) 0%, rgba(5,126,21,0.9864685742461047) 50%, rgba(0,40,2,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#002c06",endColorstr="#002802",GradientType=1); */
+    background: #000000f0;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    
+    background-size: 400% 400%;
+    
+}
+header{
+    text-align: center;
+    font-size: 4em;
+    font-weight: 700;
+    padding-bottom: 10px;
+    color: #fff;
+}
+.underline{
+    height: 4px;
+    width: 300px;
+    margin: 10px auto;
+    background-color: #000;
+    border-radius: 20px;
+}
+.container{
+    /* border: 1px solid transparent; */
+    border-radius: 10px;
+    width: 800px;
+    height: 60vh;
+    margin: 40px auto;
+    display: flex;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.container .right{
+    width: 60%;
+    height: 100%;
+    /* background-color: rgb(34, 153, 36); */
+    margin-left: 15px;
+    padding:10px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    font-weight: 100;
+}
+.container p{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+.right .center-text p:nth-child(1){
+    font-weight: 900;
+    font-size: 2rem;
+    color: #fff;
+}
+.right .center-text p:nth-child(2){
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: #000;
+}
+.left{
+    width: 40%;
+    height: 100%;
+    
+    /* background-color: #992; */
+    
+}
+.search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+input[type="text"] {
+    width: 300px; /* Set the width of the textbox */
+    padding: 10px; /* Add padding to the textbox */
+    margin: 10px 0; /* Add margin to separate it from other elements */
+    font-size: 16px; /* Set the font size */
+    border: 1px solid #ccc; /* Add a border with a light gray color */
+    border-radius: 5px; /* Add rounded corners */
+    box-sizing: border-box; /* Include padding and border in the total width/height */
+}
+
+/* Optional: Style for a focused state (when the user clicks on the textbox) */
+input[type="text"]:focus {
+    outline: none; /* Remove the default focus outline */
+    border-color: #007bff; /* Change the border color on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add a subtle box shadow on focus */
+}
+.ph-mark{
+    background-color: yellow;
+    font-weight: 900;
+    display: inline;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.crop1{
+    background-image: url('/media/pexels-tetyana-kovyrina-1600139.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.crop2{
+    background-image: url('/media/pexels-ram-iyengar-2875698.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.crop3{
+    background-image: url('/media/pexels-sergei-a-2589457.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.crop4{
+    background-image: url('/media/Sugarcane.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.crop5{
+    background-image: url('/media/soybeans-1024x683.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.crop6{
+    background-image: url('/media/4988502260_4abdd46d78_o.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.crop7{
+    background-image: url('/media/8185489292_b0e9f032ec_o.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.crop8{
+    background-image: url('/media/8157544088_1c0e3d918e_o.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.crop9{
+    background-image: url('/media/10974774686_0ec5599d1c_o.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.crop10{
+    background-image: url('/media/14947740937_c32fc3ab57_o.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.crop11{
+    background-image: url('/media/cucumber.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.crop12{
+    background-image: url('/media/pexels-pixabay-144248.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.crop13{
+    background-image: url('/media/garlic-thinkstockphotos-514990456-square.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.crop14{
+    background-image: url('/media/carrots-7.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.crop15{
+    background-image: url('/media/Growing-Tomatoes-777x518.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.crop16{
+    background-image: url('/media/green-pepper-600x675.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.crop17{
+    background-image: url('/media/radish.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.crop18{
+    background-image: url('/media/lady-fingers.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.crop19{
+    background-image: url('/media/macro_brown_mushrooms_with_shallow_background_4k_5k_hd_nature-t2.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.crop20{
+    background-image: url('/media/675px-Green_Grapes_for_Poster.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.crop21{
+    background-image: url('https://m.media-amazon.com/images/I/51oVILLqDcL._AC_UF1000,1000_QL80_.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.crop22{
+    background-image: url('https://5.imimg.com/data5/BV/NC/MY-51202890/fresh-brinjal.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.crop23{
+    background-image: url('https://static.toiimg.com/photo/77876184.cms');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.crop24{
+    background-image: url('https://media.post.rvohealth.io/wp-content/uploads/2020/08/1200x628_FACEBOOK_Is_Barley_Gluten-Free-1200x628.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.crop25{
+    background-image: url('https://dqt8gd4elnkw6.cloudfront.net/image/Heres-Why-You-Should-Add-Oats-In-Your-Beauty-Routine.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.crop26{
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWPZQWfL1AKzrVzB1A2dfaM37NFiZm6akFjyQ3GcaX_xoRrxxfh1f9qdyxseeFvj78aVQ&usqp=CAU');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.crop27{
+    background-image: url('https://5.imimg.com/data5/ANDROID/Default/2021/8/WL/QA/DI/15361988/img-20210822-115112-jpg-500x500.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.crop28{
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgVNFOsbMYNg6z38xf0TqI8rgUHuNdzU24qRiLKchQsIOFepmVVnIZhu3bnRzC7ww9y0M&usqp=CAU');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.crop29{
+    background-image: url('https://nuttyyogi.com/cdn/shop/products/Flaxseeds.jpg?v=1606373489');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.crop30{
+    background-image: url('https://images.unsplash.com/photo-1597848212624-a19eb35e2651?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE3fHx8ZW58MHx8fHx8&w=1000&q=80');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.crop31{
+    background-image: url('https://cdn.britannica.com/18/156618-050-39339EA2/cotton-harvesting.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.crop32{
+    background-image: url('https://images.immediate.co.uk/production/volatile/sites/10/2023/04/Peanut2048x1365SEOGettyImages-680875590-bb2c84f.jpg?quality=90&resize=940,627');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.crop33{
+    background-image: url('https://emeat.in/wp-content/uploads/2023/08/almonds-9e25ce7.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.crop34{
+    background-image: url('https://i0.wp.com/baganwala.com/wp-content/uploads/2022/02/3-1.png?fit=450%2C600&ssl=1');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.crop35{
+    background-image: url('https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/324156_2200-1200x628.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.crop36{
+    background-image: url('https://images-prod.healthline.com/hlcmsresource/images/AN_images/kidney-beans-1296x728-feature.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.crop37{
+    background-image: url('https://kisangreenmart.in/wp-content/uploads/2020/09/spinach-palak.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.crop38{
+    background-image: url('https://d2hmd40x45xr10.cloudfront.net/wp-content/uploads/2021/12/FloridaBroadleafMustardGreens-746x418.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.crop39{
+    background-image: url('https://cdn-prod.medicalnewstoday.com/content/images/articles/284/284815/a-bunch-of-turnips-on-a-table.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.crop40{
+    background-image: url('https://www.1mg.com/articles/wp-content/uploads/2023/10/shutterstock_451081141.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.crop41{
+    background-image: url('https://www.wockhardthospitals.com/wp-content/uploads/2023/10/Top-5-Health-Benefits-of-Watermelon-1024x683.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+
+

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Survey Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/style/style-personalinfo.css">   
+    <script src="/config/app.js"></script> 
+</head>
+
+<body>
+    <div class="container" id="container1">
+        <h1>Farmer Survey Info</h1>
+        <div class="input-field">
+            <label for="surveyNum"><span id="icon"><i class="fa-solid fa-id-card-clip"></i></span> Survey Number :<span>*</span></label>
+            <input type="text" id="surveyNum" name="surveyNum" placeholder="Enter Your Survey Number" required>
+        </div>
+        <div class="input-field">
+            <label for="upload"><span id="icon"><i class="fa-solid fa-image"></i></span> Image of 7/12 :<span>*</span></label>
+            <input type="file" id="upload" name="upload" placeholder="Upload 7/12" required>
+        </div>
+        <button type="button" onclick="nextContainer()">Next</button>
+    </div>
+
+    <div class="container" id="container2">
+        <h1>Farmer Information</h1>
+        <div method="post" id="farmerForm">
+            <div class="input-field">
+                <label for="firstName">First name:</label>
+                <input type="text" name="firstName" id="firstName" required>
+            </div>
+            <div class="input-field">
+                <label for="phone">Phone:</label>
+                <input type="tel" name="phone" id="phone" required>
+            </div>
+            <div class="input-field">
+                <label for="aadhar">Enter your Aadhar number:</label>
+                <input type="text" name="aadhar" id="aadhar" required>
+            </div>
+            <div class="input-field">
+                <label for="email">Email-ID:</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+            <div class="input-field">
+                <label for="dob">Date Of Birth:</label>
+                <input type="date" name="dob" id="dob" required>
+            </div>
+            <div class="input-field">
+                <label for="surveyNum">Survey Number:</label>
+                <input type="text" name="surveyNum" id="surveyNum">
+            </div>
+            <div class="input-field">
+                <label for="image">Upload image of 7/12:</label>
+                <input type="file" name="image" id="image" enctype="multipart/form-data" required>
+            </div>
+            <div class="input-field">
+                <label for="fieldUnit">Select field Unit:</label>
+                <select name="fieldUnit" id="fieldUnit" required>
+                    <option value="Hectare">Hectare</option>
+                    <option value="Gunta">Gunta</option>
+                    <option value="SqMeter">Square meter</option>
+                    <option value="Acre">Acre</option>
+                </select>
+            </div>
+            <div class="input-field">
+                <label for="soilType">Type of soil:</label>
+                <select name="soilType" id="soilType" required>
+                    <option value="AlluvialSoil">Alluvial Soil</option>
+                    <option value="BlackCottonSoil">Black Cotton Soil</option>
+                    <option value="RedSoil">Red Soil</option>
+                    <option value="LateriteSoil">Laterite Soil</option>
+                    <option value="MountainousSoil">Mountainous or Forest Soil</option>
+                    <option value="AridSoil">Arid or Desert Soil</option>
+                    <option value="SalineAlkalineSoil">Saline and Alkaline Soil</option>
+                    <option value="PeatyMarshySoil">Peaty and Marshy Soil</option>
+                </select>
+            </div>
+            <div class="input-field">
+                <label for="fieldArea">Enter Area:</label>
+                <input type="number" name="fieldArea" id="fieldArea" required>
+            </div>
+            <div class="input-field">
+                <label for="ph">Enter PH of soil:</label>
+                <input type="number" name="ph" id="ph" required>
+            </div>
+            <button onclick="logFormValues()" id="submit" type="button">Submit</button>
+            <button type="button" onclick="prevContainer()">Previous</button>
+        </div>
+    </div>
+
+
+   <script src="../config/app.js"></script>
+   <script type="module">
+
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-app.js";
+    import {getFirestore , collection, addDoc } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-firestore.js"
+
+
+
+
+    const firebaseConfig = {
+        apiKey: "AIzaSyBpmWDkwcgkUWDASIaiuLNg7FuG2lWmXxU",
+        authDomain: "farma-80b4f.firebaseapp.com",
+        projectId: "farma-80b4f",
+        storageBucket: "farma-80b4f.appspot.com",
+        messagingSenderId: "679697403307",
+        appId: "1:679697403307:web:e191e2f6be14bc9d0f16ee"
+      };
+    
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const db = getFirestore(app);
+
+      const sub = document.getElementById("submit");
+      
+      sub.addEventListener("click",async ()=>{
+             
+        const firstName = document.getElementById("firstName").value;
+        const phone = document.getElementById("phone").value;
+        const aadhar = document.getElementById("aadhar").value;
+        const email = document.getElementById("email").value;
+        const dob = document.getElementById("dob").value;
+        const surveyNum = document.getElementById("surveyNum").value;
+        const image = document.getElementById("image").value;
+        const fieldUnit = document.getElementById("fieldUnit").value;
+        const soilType = document.getElementById("soilType").value;
+        const fieldArea = document.getElementById("fieldArea").value;
+        const ph = document.getElementById("ph").value;
+
+        
+        const formData = {
+            firstName: firstName,
+            phone: phone,
+            aadhar: aadhar,
+            email: email,
+            dob: dob,
+            surveyNum: surveyNum,
+            image: image,
+            fieldUnit: fieldUnit,
+            soilType: soilType,
+            fieldArea: fieldArea,
+            ph: ph
+        };
+
+
+
+
+        try {
+            const docRef = await addDoc(collection(db, "formData"), formData);
+            console.log("Document written with ID: ", docRef.id);
+          } catch (e) {
+            console.error("Error adding document: ", e);
+          }
+          
+      })
+   
+   </script>
+
+</body>
+
+</html>
